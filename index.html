@@ -22,16 +22,24 @@
                 </div>
             </div>
         </form>
+        
         <h3 class="mt-4 text-2xl font-semibold mb-5 ml-10 md:ml-40">Task</h3>
         <form id="addForm" class="mt-5 ">
             <ul class="list-group mr-10 md:mr-40 ml-40 font-semibold " id="items"></ul>
-            <li class="space-x-16"></li>
+            
         </form>
     
     </div>
 </section>
 
-<script src="js/script.js">
+<script>
+    const form = document.querySelector("#addForm");
+
+    const items = document.getElementById("items");
+    const submit = document.getElementById("submit");
+
+    form.addEventListener("submit", addItem);
+    items.addEventListener("click", removeItem);
     
 </script>
 </body>
