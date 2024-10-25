@@ -108,7 +108,15 @@ function removeItem(e){
             },3000);
         }
     }
-    
+    if (e.target.classList.contains("edit")){
+        document.getElementById("item").value = e.target.parentNode.childNodes[0].data;
+        submit.value = "EDIT";
+        editItem = e;
+    }
+}
+function toggleButton(ref, btnID){
+    document.getElementById(btnID).disabled = false;
+}
 </script>
 </body>
 </html>
