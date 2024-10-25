@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#deleteButton{
+    padding: 20px 30px;
+}
