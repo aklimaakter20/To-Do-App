@@ -66,7 +66,32 @@
 else
  document.getElementById("item").value = "";
 
+ let li = document.createElement("li");
+ li.className = "list-group-item";
+
  
+ let deleteButton = document.createElement("button");
+ deleteButton.className = "float-right delete";
+ deleteButton.style.backgroundColor = "aqua";
+ 
+
+ deleteButton.style.borderRadius = "4px";
+ deleteButton.appendChild(document.createTextNode("Delete"));
+
+ let editButton = document.createElement("button");
+ editButton.className = "float-right edit";
+ editButton.style.backgroundColor = "tomato";
+ 
+ editButton.style.borderRadius = "4px";
+ editButton.appendChild(document.createTextNode("Edit"));
+
+ li.appendChild(document.createTextNode(newItem));
+ li.appendChild(deleteButton);
+ li.appendChild(editButton);
+ items.appendChild(li);
+}
+
+
 </script>
 </body>
 </html>
