@@ -91,7 +91,24 @@ else
  items.appendChild(li);
 }
 
+function removeItem(e){
+    e.preventDefault();
 
+    if (e.target.classList.contains("delete")){
+        if (confirm("Are you Sure?")){
+            let li = e.target.parentNode;
+            items.removeChild(li);
+
+            document.getElementById("lblSuccess").innerHTML = "Text deleted successfully";
+
+            document.getElementById("lblSuccess").style.display = "block";
+
+            setTimeout(function(){
+                document.getElementById("lblSuccess").style.display = "none";
+            },3000);
+        }
+    }
+    
 </script>
 </body>
 </html>
