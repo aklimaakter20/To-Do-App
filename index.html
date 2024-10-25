@@ -11,11 +11,11 @@
     <div class="mt-10">
         <h3 class="text-2xl font-semibold mb-5 md:ml-40">Add Items</h3>
 
-        <label id="lblSuccess" class="text-green-800" style="display: none;"></label>
+        <label id="lblSuccess" class="text-green-800 ml-24" style="display: none;"></label>
         <form id="addForm">
             <div class="row space-y-5 sm:flex items-center justify-around">
                 <div class="md:col-6">
-                    <input type="text" onclick="toggleButton(this,'submit')" class="outline outline-2 w-96 sm:ml-40 " id="item">
+                    <input type="text" onclick="toggleButton()" class="outline outline-2 w-96 sm:ml-40 " id="item">
                 </div>
                 <div class="md:col-6">
                     <input type="submit" class="bg-gray-700 sm:ml-40 text-xl text-white px-6 py-2 rounded-lg" id="submit" value="Submit" >
@@ -37,9 +37,10 @@
 
     const items = document.getElementById("items");
     const submit = document.getElementById("submit");
-
+    let editItem = null;
     form.addEventListener("submit", addItem);
     items.addEventListener("click", removeItem);
+
     
 </script>
 </body>
