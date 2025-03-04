@@ -131,4 +131,10 @@ ul li span:hover{
         width: 20px;
      
     }
+    ul li span{
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        text-align: right;
+    }
   }
